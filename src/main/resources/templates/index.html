@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <title>Digital Library</title>
   <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/indexStyles.css" th:href="@{/css/indexStyles.css}"/>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="navbar-nav">
@@ -16,7 +17,9 @@
     </div>
   </nav>
   <div class="container">
-    <h1 th:text="'Welcome!'"/>
+    <div class="row">
+      <h1 class="text-center">Welcome!</h1>
+    </div>
   </div>
   <script type="text/javascript" th:src="@{/js/jquery-3.3.1.slim.min.js}" src="../static/js/jquery-3.3.1.slim.min.js"></script>
   <script type="text/javascript" th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
