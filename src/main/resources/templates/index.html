@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Digital Library</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
-  <h1 th:text="'Welcome!'"/>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a href="#">Home</a></li>
+        <li class="nav-item" href="#"><a href="#">About</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 th:text="'Welcome!'"/>
+  </div>
+  <script type="text/javascript" th:src="@{/js/jquery-3.3.1.slim.min.js}" src="../static/js/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript" th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
 </body>
 </html>
