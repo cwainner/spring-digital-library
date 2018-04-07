@@ -8,14 +8,23 @@ import org.springframework.web.servlet.ModelAndView;
 public class RootController {
 
   @GetMapping("/")
-  public String index(){
-    return "index";
+  public ModelAndView index(){
+    ModelAndView model = new ModelAndView();
+    model.setViewName("index");
+    return model;
   }
 
   @GetMapping("/about")
   public ModelAndView about(){
     ModelAndView model = new ModelAndView();
     model.setViewName("about");
+    return model;
+  }
+
+  @GetMapping("/contact")
+  public ModelAndView contact(){
+    ModelAndView model = new ModelAndView();
+    model.setViewName("contact");
     return model;
   }
 }
