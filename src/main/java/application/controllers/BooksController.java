@@ -9,7 +9,7 @@ public class BooksController {
   @GetMapping("/books")
   public ModelAndView booksList(){
     ModelAndView model = new ModelAndView();
-    model.setViewName("books");
+    model.setViewName("books/books");
     return model;
   }
 }
