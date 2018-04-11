@@ -1,21 +1,34 @@
 package application.models;
 
+import javax.persistence.*;
+
+@Entity
 public class Book {
-  private String id;
+
+  @Id
+  @GeneratedValue
+  private int id;
+
+  @Column(nullable = false)
   private String title;
+
+  @Column(nullable = false)
   private String author;
+
+  @Column(nullable = false)
   private float reviewScore;
+
+  @Column(nullable = false)
   private int stock;
 
-  public Book(String id, String title, String author, int stock){
-    this.id = id;
+  public Book(String title, String author, int stock){
     this.title = title;
     this.author = author;
     this.stock = stock;
     this.reviewScore = 0;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
   }
 
