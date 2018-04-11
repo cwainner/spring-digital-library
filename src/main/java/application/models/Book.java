@@ -18,11 +18,14 @@ public class Book {
 
   private int stock;
 
-  public Book(String title, String author, int stock){
+  public Book(){}
+
+  public Book(Long id, String title, String author, int stock, float reviewScore){
+    this.id = id;
     this.title = title;
     this.author = author;
     this.stock = stock;
-    this.reviewScore = 0;
+    this.reviewScore = reviewScore;
   }
 
   public Long getId() {
