@@ -3,22 +3,19 @@ package application.models;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "books")
 public class Book {
 
   @Id
-  @GeneratedValue
-  private int id;
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
-  @Column(nullable = false)
   private String title;
 
-  @Column(nullable = false)
   private String author;
 
-  @Column(nullable = false)
   private float reviewScore;
 
-  @Column(nullable = false)
   private int stock;
 
   public Book(String title, String author, int stock){
@@ -28,7 +25,7 @@ public class Book {
     this.reviewScore = 0;
   }
 
-  public int getId() {
+  public Long getId() {
     return id;
   }
 
