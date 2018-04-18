@@ -20,8 +20,16 @@ public class BooksController {
     ModelAndView model = new ModelAndView();
     model.setViewName("books/books");
 
-    List<Book> books = (List<Book>) bookService.findAll();
+    List<Book> books = bookService.findAll();
     model.addObject("books", books);
+
+    return model;
+  }
+
+  @GetMapping("/books/new")
+  public ModelAndView newBook(){
+    ModelAndView model = new ModelAndView();
+    model.setViewName("books/newBook");
 
     return model;
   }
